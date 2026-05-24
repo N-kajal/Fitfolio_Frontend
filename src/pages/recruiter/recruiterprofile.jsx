@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axio";
-import "../../styles/recruiterProfile.css";
+import "../../styles/recruiterprofile.css";
 import RecruiterNavbar from "../../components/RecruiterNavbar";
 
 function RecruiterProfile() {
