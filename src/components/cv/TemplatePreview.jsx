@@ -2,7 +2,7 @@ import Template1 from "./templates/template1";
 import Template2 from "./templates/template2";
 import Template3 from "./templates/template3";
 import Template4 from "./templates/template4";
-import Template5 from "./templates/Template5";
+import Template5 from "./templates/template5";
 import Template6 from "./templates/template6";
 
 const TemplatePreview = ({ template, cvData }) => {
