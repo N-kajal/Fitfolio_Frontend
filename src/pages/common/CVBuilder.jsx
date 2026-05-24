@@ -1,4 +1,4 @@
-import "../../styles/cvbuilder.css";
+import "../../styles/cvBuilder.css";
 import TemplateCard from "../../components/cv/TemplateCard";
 import { useNavigate } from "react-router-dom";
 import template1Img from "../../images/template1.jpg";
