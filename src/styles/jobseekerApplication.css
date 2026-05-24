@@ -1,0 +1,312 @@
+/* ===========================
+   FitFolio — jobseekerApplication.css
+   Sky Blue · White · Soft Purple
+=========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+
+  --white: #ffffff;
+
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+
+  --radius: 20px;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.dashboard-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #dff4ff 25%,
+    #8fd3ff 60%,
+    #5bb8f5 100%
+  );
+
+  box-shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+
+  z-index: 1000;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: #0A193C;
+
+  cursor: pointer;
+
+  letter-spacing: -1px;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-text span {
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #5bb8f5
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+.cv-back-btn {
+  padding: 9px 22px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    var(--sky),
+    var(--purple)
+  );
+
+  color: var(--white);
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 4px 14px rgba(91, 184, 245, 0.3);
+}
+
+.cv-back-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 20px rgba(46, 157, 228, 0.4);
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.application-page {
+  min-height: 100vh;
+
+  padding: 130px 20px 50px;
+
+  background: linear-gradient(
+    135deg,
+    var(--sky-light) 0%,
+    #f0e9ff 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===========================
+   PAGE TITLE
+=========================== */
+
+.application-page h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+
+  color: var(--text-dark);
+
+  margin-bottom: 35px;
+
+  position: relative;
+}
+
+.application-page h1::after {
+  content: "";
+
+  width: 80px;
+  height: 5px;
+
+  border-radius: 4px;
+
+  background: linear-gradient(
+    90deg,
+    var(--sky),
+    var(--purple)
+  );
+
+  display: block;
+
+  margin: 12px auto 0;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.application-form {
+  width: 100%;
+  max-width: 720px;
+
+  background: var(--white);
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.application-form input {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  border: 1.8px solid #d1e9fb;
+
+  border-radius: 50px;
+
+  background: var(--sky-light);
+
+  color: var(--text-dark);
+
+  font-size: 0.96rem;
+
+  outline: none;
+
+  transition: 0.25s;
+
+  font-family: inherit;
+}
+
+.application-form input:focus {
+  border-color: var(--sky);
+
+  background: var(--white);
+
+  box-shadow: 0 0 0 3px rgba(91, 184, 245, 0.15);
+}
+
+.application-form input::placeholder {
+  color: var(--text-light);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.application-form button {
+  margin-top: 12px;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    var(--sky),
+    var(--purple)
+  );
+
+  color: var(--white);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 4px 16px rgba(91, 184, 245, 0.3);
+}
+
+.application-form button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 22px rgba(46, 157, 228, 0.4);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+  .dashboard-navbar {
+    padding: 0 18px;
+  }
+
+  .logo-text {
+    font-size: 1.7rem;
+  }
+
+  .application-page h1 {
+    font-size: 2.1rem;
+  }
+
+  .application-form {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .application-page {
+    padding: 120px 14px 30px;
+  }
+
+  .application-form {
+    padding: 24px 16px;
+  }
+
+  .application-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .application-form input {
+    font-size: 0.92rem;
+  }
+
+  .application-form button {
+    font-size: 0.95rem;
+  }
+}

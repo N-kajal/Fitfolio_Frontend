@@ -1,0 +1,200 @@
+/* ===========================
+   FitFolio — jobseekerHome.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.user-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 40px;
+}
+
+/* ===========================
+   SEARCH BAR
+   =========================== */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 13px 20px;
+  border: 1.8px solid #d1e9fb;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: var(--white);
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  box-shadow: var(--shadow);
+}
+
+.search-bar input:focus {
+  border-color: var(--sky);
+  box-shadow: 0 0 0 3px rgba(91, 184, 245, 0.15);
+}
+
+.search-bar input::placeholder {
+  color: var(--text-light);
+}
+
+.search-bar button {
+  padding: 13px 28px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(91, 184, 245, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.search-bar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 157, 228, 0.4);
+}
+
+/* ===========================
+   SECTION TITLE
+   =========================== */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+/* ===========================
+   JOB TABLE
+   =========================== */
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Header */
+.job-table thead tr {
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+}
+
+.job-table thead th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+/* Body rows */
+.job-table tbody tr {
+  border-bottom: 1px solid #eaf4fd;
+  transition: background 0.18s;
+}
+
+.job-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.job-table tbody tr:hover {
+  background: var(--sky-light);
+}
+
+.job-table tbody td {
+  padding: 13px 16px;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+}
+
+/* Empty state row */
+.job-table tbody td[colspan] {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   VISIT PROFILE BUTTON
+   =========================== */
+.visit-btn {
+  padding: 7px 18px;
+  border: none;
+  border-radius: 50px;
+  background: var(--purple-light);
+  color: var(--purple);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.18s;
+  font-family: inherit;
+}
+
+.visit-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .user-container {
+    padding: 24px 16px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+
+  /* Scrollable table on small screens */
+  .job-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

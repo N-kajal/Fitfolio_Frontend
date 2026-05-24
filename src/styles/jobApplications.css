@@ -1,0 +1,234 @@
+/* ===========================
+   FitFolio — jobApplications.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.job-applications-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 48px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ===========================
+   CARD
+   =========================== */
+.job-applications-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 860px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.job-applications-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.job-applications-card h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ===========================
+   EMPTY STATE
+   =========================== */
+.no-applications {
+  text-align: center;
+  padding: 32px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   TABLE
+   =========================== */
+.job-applications-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.job-applications-table thead tr {
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+}
+
+.job-applications-table thead th {
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.job-applications-table tbody tr {
+  border-bottom: 1px solid #eaf4fd;
+  transition: background 0.18s;
+}
+
+.job-applications-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.job-applications-table tbody tr:hover {
+  background: var(--sky-light);
+}
+
+.job-applications-table tbody td {
+  padding: 13px 16px;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  vertical-align: middle;
+}
+
+/* ===========================
+   STATUS BADGES
+   =========================== */
+.status-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-shortlisted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-applied {
+  background: var(--sky-light);
+  color: var(--sky-dark);
+}
+
+/* ===========================
+   ACTION BUTTONS
+   =========================== */
+.action-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+/* Download CV link */
+.view-cv-btn {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+.view-cv-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Approve */
+.accept-btn {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.accept-btn:hover {
+  background: #059669;
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Reject */
+.reject-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.reject-btn:hover {
+  background: #e53e3e;
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   BACK BUTTON
+   =========================== */
+.back-btn {
+  align-self: flex-start;
+  padding: 9px 22px;
+  border: 2px solid var(--sky);
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--sky-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--sky-light);
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 640px) {
+  .job-applications-card {
+    padding: 24px 16px;
+  }
+
+  .job-applications-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

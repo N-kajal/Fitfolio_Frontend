@@ -1,0 +1,152 @@
+/* ===========================
+   FitFolio — jobSeekerNavbar.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+.job-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #dff4ff 25%,
+    #8fd3ff 60%,
+    #5bb8f5 100%
+  );
+  box-shadow: 0 2px 16px rgba(91, 184, 245, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ===========================
+   LOGO
+   =========================== */
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0A193C;
+
+  cursor: pointer;
+  letter-spacing: -1px;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-text span {
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #5bb8f5
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ===========================
+   RIGHT SECTION
+   =========================== */
+.job-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ===========================
+   NAV LINKS
+   =========================== */
+.job-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.job-nav-links a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  padding: 7px 14px;
+  border-radius: 50px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.job-nav-links a:hover {
+  background: var(--sky-light);
+  color: var(--sky-dark);
+}
+
+/* Active link */
+.job-nav-links a.active-nav {
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(91, 184, 245, 0.3);
+}
+
+/* ===========================
+   LOGOUT BUTTON
+   =========================== */
+.logout-btn {
+  padding: 8px 22px;
+  border: 2px solid var(--sky);
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--sky-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.22s, color 0.22s, transform 0.2s;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  background: #fff0f0;
+  border-color: #e53e3e;
+  color: #e53e3e;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .job-navbar {
+    flex-direction: column;
+    padding: 14px 20px;
+    gap: 12px;
+  }
+
+  .job-nav-right {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .job-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

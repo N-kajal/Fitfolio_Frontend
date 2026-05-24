@@ -1,0 +1,160 @@
+.template1 {
+  width: 900px;
+  margin: 20px auto;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* HEADER */
+.t1-header {
+  display: flex;
+  align-items: center;
+  background: #1b7d85;
+  padding: 30px;
+  color: white;
+}
+
+.t1-profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  margin-right: 30px;
+}
+
+.t1-profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.t1-header-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.t1-header-text h2 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.t1-job-title {
+  background: #1b7d85;
+  color: white;
+  padding: 10px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* BODY */
+.t1-body {
+  display: flex;
+}
+
+.t1-left {
+  width: 35%;
+  background: #e3e7e8;
+  padding: 25px;
+}
+
+.t1-right {
+  width: 65%;
+  background: white;
+  padding: 25px;
+}
+
+.t1-section {
+  margin-bottom: 25px;
+}
+
+.t1-section h3 {
+  border-bottom: 2px solid #1b7d85;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.t1-section ul {
+  padding-left: 15px;
+}
+
+.t1-section ul li {
+  margin-bottom: 8px;
+}
+
+.t1-exp h4,
+.t1-edu h4 {
+  margin: 5px 0;
+}
+
+.template1 {
+  width: 900px;
+  margin: 20px auto;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #222;
+  position: relative;
+}
+
+/* HEADER */
+.t1-header {
+  display: flex;
+  align-items: center;
+  background: #1b7d85;
+  padding: 60px 40px 40px 40px;
+  color: white;
+  position: relative;
+}
+
+/* PROFILE IMAGE WRAPPER */
+.t1-profile-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+/* BIG ROUND IMAGE */
+.t1-profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+}
+
+/* TEXT AREA */
+.t1-header-text {
+  margin-left: 240px;
+}
+
+.t1-header-text h1 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.t1-header-text h2 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* JOB TITLE */
+.t1-job-title {
+  background: #1b7d85;
+  color: white;
+  padding: 12px 40px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .cv-paper {
+    box-shadow: none;
+    margin: 0;
+  }
+}

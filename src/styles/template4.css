@@ -1,0 +1,98 @@
+.template4 {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* HEADER */
+.t4-header {
+  background: #0f2a5f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.t4-header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.t4-header p {
+  margin-top: 8px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* BODY */
+.t4-body {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* LEFT COLUMN */
+.t4-left {
+  width: 35%;
+  border-right: 1px solid #ddd;
+  padding-right: 30px;
+}
+
+.t4-left h2 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.t4-left p,
+.t4-left li {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.t4-left ul {
+  padding-left: 18px;
+}
+
+/* RIGHT COLUMN */
+.t4-right {
+  width: 65%;
+}
+
+.t4-right h2 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.t4-right p {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* EDIT MODE */
+[contenteditable="true"]:hover {
+  outline: 1px dashed rgba(0,0,0,0.3);
+  cursor: text;
+}
+
+/* PRINT MODE */
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .cv-paper {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

@@ -1,0 +1,117 @@
+.template5 {
+  background: #ffffff;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+}
+
+/* TOP SECTION */
+.t5-top {
+  display: flex;
+  height: 300px;
+}
+
+/* IMAGE SIDE */
+.t5-image {
+  width: 40%;
+}
+
+.t5-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HEADER SIDE */
+.t5-header {
+  width: 60%;
+  background: #cbbaba;
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.t5-header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.t5-header p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* BODY */
+.t5-body {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* LEFT COLUMN */
+.t5-left {
+  width: 35%;
+}
+
+.t5-left h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.t5-left p {
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.t5-left ul {
+  padding-left: 18px;
+}
+
+.t5-left li {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+/* RIGHT COLUMN */
+.t5-right {
+  width: 65%;
+}
+
+.t5-right h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.t5-right p {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* EDIT MODE */
+[contenteditable="true"]:hover {
+  outline: 1px dashed rgba(0,0,0,0.3);
+  cursor: text;
+}
+
+/* PRINT MODE */
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .cv-paper {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

@@ -1,0 +1,89 @@
+.template2 {
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+/* ===== HEADER ===== */
+.t2-header {
+  display: flex;
+  background: black;
+  color: white;
+  padding: 40px;
+  position: relative;
+}
+
+.t2-header-left {
+  width: 60%;
+}
+
+.t2-header h1 {
+  font-size: 32px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.t2-header h3 {
+  margin-top: 5px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.t2-contact {
+  margin-top: 25px;
+  font-size: 13px;
+}
+
+.t2-contact p {
+  margin: 5px 0;
+}
+
+/* decorative pattern */
+.t2-header-pattern {
+  width: 40%;
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 15px,
+    black 15px,
+    black 30px
+  );
+}
+
+/* ===== BODY ===== */
+.t2-body {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+/* LEFT */
+.t2-left {
+  padding: 40px;
+  border-right: 2px solid black;
+}
+
+.t2-left h2 {
+  font-size: 14px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+/* RIGHT */
+.t2-right {
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+.t2-right h2 {
+  font-size: 14px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.t2-right ul {
+  padding-left: 18px;
+}
+
+.t2-right li {
+  font-size: 13px;
+  margin-bottom: 5px;
+}

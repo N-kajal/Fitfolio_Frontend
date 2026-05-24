@@ -1,0 +1,201 @@
+/* ===========================
+   FitFolio — recruiterHome.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.recruiter-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 40px;
+}
+
+/* ===========================
+   STATS ROW
+   =========================== */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--sky);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:nth-child(2) { border-left-color: var(--purple); }
+.stat-card:nth-child(3) { border-left-color: var(--sky-dark); }
+.stat-card:nth-child(4) {
+  border-left-color: transparent;
+  border-image: linear-gradient(to bottom, var(--sky), var(--purple)) 1;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(91, 184, 245, 0.22);
+}
+
+.stat-card p {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.stat-card h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+/* ===========================
+   APPLICATIONS TABLE CONTAINER
+   =========================== */
+.applications-table-container {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.applications-table-container h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.applications-table-container h2::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ===========================
+   TABLE
+   =========================== */
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.applications-table thead tr {
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+}
+
+.applications-table thead th {
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.applications-table tbody tr {
+  border-bottom: 1px solid #eaf4fd;
+  transition: background 0.18s;
+}
+
+.applications-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.applications-table tbody tr:hover {
+  background: var(--sky-light);
+}
+
+.applications-table tbody td {
+  padding: 13px 16px;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+}
+
+.applications-table tbody td[colspan] {
+  text-align: center;
+  color: var(--text-light);
+  padding: 24px;
+}
+
+/* ===========================
+   VIEW APPLICATIONS BUTTON
+   =========================== */
+.view-btn {
+  padding: 7px 18px;
+  border: none;
+  border-radius: 50px;
+  background: var(--purple-light);
+  color: var(--purple);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+}
+
+.view-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .recruiter-page {
+    padding: 24px 16px;
+  }
+
+  .applications-table-container {
+    padding: 20px 16px;
+    overflow-x: auto;
+  }
+
+  .applications-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+}

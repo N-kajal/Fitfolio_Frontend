@@ -1,0 +1,208 @@
+/* ===========================
+   FitFolio — jobseekerDashboard.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 40px;
+}
+
+/* ===========================
+   STAT BOXES
+   =========================== */
+.stats-container {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  flex: 1;
+  min-width: 180px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--sky);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-box:nth-child(2) {
+  border-left-color: var(--purple);
+}
+
+.stat-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(91, 184, 245, 0.22);
+}
+
+.stat-box p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-box h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+/* ===========================
+   TABLE WRAPPER
+   =========================== */
+.applied-table-wrapper {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+/* ===========================
+   SECTION TITLE
+   =========================== */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ===========================
+   TABLE
+   =========================== */
+.applied-job-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.applied-job-table thead tr {
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+}
+
+.applied-job-table thead th {
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.applied-job-table tbody tr {
+  border-bottom: 1px solid #eaf4fd;
+  transition: background 0.18s;
+}
+
+.applied-job-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.applied-job-table tbody tr:hover {
+  background: var(--sky-light);
+}
+
+.applied-job-table tbody td {
+  padding: 13px 16px;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+}
+
+/* Empty state */
+.applied-job-table tbody td[colspan] {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   STATUS BADGES
+   =========================== */
+.status {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status.approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.pending {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status.reviewing {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 24px 16px;
+  }
+
+  .applied-table-wrapper {
+    padding: 20px 16px;
+    overflow-x: auto;
+  }
+
+  .applied-job-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .stats-container {
+    gap: 16px;
+  }
+}

@@ -1,0 +1,131 @@
+/* ===========================
+   FitFolio — recruiterProfile.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.recruiter-profile-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 48px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===========================
+   PROFILE CARD
+   =========================== */
+.profile-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 580px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+/* ===========================
+   SECTION HEADINGS
+   =========================== */
+.profile-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sky-dark);
+  margin: 20px 0 4px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--sky-light);
+  position: relative;
+}
+
+.profile-card h2:first-of-type {
+  margin-top: 0;
+}
+
+/* ===========================
+   PROFILE ROWS
+   =========================== */
+.profile-card p {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eaf4fd;
+  font-size: 0.93rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.profile-card p:last-of-type {
+  border-bottom: none;
+}
+
+.profile-card p b {
+  color: var(--text-dark);
+  font-weight: 600;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   EDIT BUTTON
+   =========================== */
+.edit-btn {
+  margin-top: 24px;
+  padding: 13px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 4px 16px rgba(91, 184, 245, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(46, 157, 228, 0.4);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 480px) {
+  .recruiter-profile-page {
+    padding: 32px 16px;
+  }
+
+  .profile-card {
+    padding: 28px 20px;
+  }
+
+  .profile-card p {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .profile-card p b {
+    min-width: unset;
+  }
+}

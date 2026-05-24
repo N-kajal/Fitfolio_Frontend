@@ -1,0 +1,407 @@
+/* ===========================
+   FitFolio — cvbuilder.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   NAVBAR
+   (reuses .cv-navbar, .cv-logo, .cv-back-btn
+    already defined in jobseekerApplication.css
+    — keep here for standalone use) 
+   =========================== */
+.cv-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+ background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #dff4ff 25%,
+    #8fd3ff 60%,
+    #5bb8f5 100%
+  );
+
+
+  box-shadow: 0 2px 16px rgba(91, 184, 245, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0A193C;
+
+  cursor: pointer;
+  letter-spacing: -1px;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-text span {
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #5bb8f5
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}  
+
+
+.cv-back-btn {
+  padding: 8px 22px;
+  border: 2px solid var(--sky);
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--sky-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cv-back-btn:hover {
+  background: var(--sky-light);
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.cv-gallery-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 48px 40px;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.cv-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.cv-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.cv-header h2::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.cv-header p {
+  font-size: 0.97rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* ===========================
+   TEMPLATE GRID
+   =========================== */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   TEMPLATE CARD
+   (styles for TemplateCard component)
+   =========================== */
+.template-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.template-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(91, 184, 245, 0.25);
+}
+
+/* Template preview image */
+.template-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Card footer */
+.template-card-footer {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.template-card-footer h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Recommended badge */
+.recommended-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+/* Use template button */
+.template-card-btn {
+  display: block;
+  margin: 0 18px 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(91, 184, 245, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.template-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 157, 228, 0.4);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .cv-gallery-page {
+    padding: 32px 16px;
+  }
+
+  .cv-navbar {
+    padding: 12px 16px;
+  }
+
+  .template-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .template-grid {
+    grid-template-columns: 1fr;
+  }
+} 
+/* ===========================
+   FitFolio — template.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* ===========================
+   PAGE WRAPPER
+   =========================== */
+.cv-editor-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+.cv-editor-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #dff4ff 25%,
+    #8fd3ff 60%,
+    #5bb8f5 100%
+  );
+
+
+  box-shadow: 0 2px 16px rgba(91, 184, 245, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-logo {
+  height: 42px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.editor-logo:hover {
+  opacity: 0.8;
+}
+
+/* ===========================
+   NAVBAR BUTTONS
+   =========================== */
+.editor-btn {
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  border: none;
+}
+
+/* Back */
+.editor-btn.back-btn {
+  background: var(--white);
+  color: var(--sky-dark);
+  border: 2px solid var(--sky);
+}
+
+.editor-btn.back-btn:hover {
+  background: var(--sky-light);
+  transform: translateY(-1px);
+}
+
+/* Download */
+.editor-btn.download-btn {
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(91, 184, 245, 0.35);
+}
+
+.editor-btn.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 157, 228, 0.4);
+}
+
+/* ===========================
+   BODY / PREVIEW AREA
+   =========================== */
+.cv-editor-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.cv-preview-wrapper {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 8px 36px rgba(91, 184, 245, 0.18);
+  padding: 0;
+  width: 100%;
+  max-width: 860px;
+  overflow: hidden;
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+@media print {
+  .cv-editor-navbar {
+    display: none;
+  }
+
+  .cv-editor-page {
+    background: none;
+  }
+
+  .cv-editor-body {
+    padding: 0;
+  }
+
+  .cv-preview-wrapper {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 600px) {
+  .cv-editor-navbar {
+    padding: 12px 16px;
+  }
+
+  .cv-editor-body {
+    padding: 24px 12px;
+  }
+
+  .editor-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}

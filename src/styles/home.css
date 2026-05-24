@@ -1,0 +1,329 @@
+/* ===========================
+   FitFolio — home.css
+   Colors: Sky Blue · White · Soft Purple
+   =========================== */
+
+/* --- Variables --- */
+:root {
+  --sky: #5bb8f5;
+  --sky-light: #e8f6ff;
+  --sky-dark: #2e9de4;
+  --purple: #8b5cf6;
+  --purple-light: #ede9fe;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --radius: 14px;
+  --shadow: 0 4px 20px rgba(91, 184, 245, 0.18);
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+  padding: 80px 40px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+/* Left Text */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+.hero-text h1 span,
+.hero-text h1 em {
+  color: var(--sky-dark);
+  font-style: normal;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: var(--text-mid);
+  margin-bottom: 36px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: var(--sky);
+  color: var(--white);
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 4px 14px rgba(91, 184, 245, 0.35);
+}
+
+.btn:hover {
+  background: var(--sky-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 157, 228, 0.4);
+}
+
+.btn:nth-child(2) {
+  background: var(--purple);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+}
+
+.btn:nth-child(2):hover {
+  background: #7c3aed;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn:nth-child(3) {
+  background: var(--white);
+  color: var(--sky-dark);
+  border: 2px solid var(--sky);
+  box-shadow: none;
+}
+
+.btn:nth-child(3):hover {
+  background: var(--sky-light);
+  transform: translateY(-2px);
+}
+
+/* Right Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+/* ===========================
+   FEATURES SECTION
+   =========================== */
+.features-section {
+  padding: 80px 40px;
+  background: var(--white);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--sky-light);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  border-left: 4px solid var(--sky);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.feature-card:nth-child(even) {
+  background: var(--purple-light);
+  border-left-color: var(--purple);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+}
+
+/* ===========================
+   STEPS SECTION
+   =========================== */
+.steps-section {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #f0e9ff 100%);
+}
+
+.steps-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 100px;
+}
+
+.step-item span {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky), var(--purple));
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(91, 184, 245, 0.35);
+}
+
+.step-item p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.line {
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sky), var(--purple));
+  min-width: 40px;
+  max-width: 100px;
+  border-radius: 2px;
+  margin-bottom: 22px;   /* aligns with center of circles */
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  background: var(--text-dark);
+  color: #a0aec0;
+  text-align: center;
+  padding: 24px 40px;
+  font-size: 0.88rem;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 320px;
+  }
+
+  .steps-line {
+    gap: 10px;
+  }
+
+  .line {
+    min-width: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .features-section,
+  .steps-section {
+    padding: 60px 20px;
+  }
+
+  .steps-line {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .line {
+    width: 3px;
+    height: 30px;
+    min-width: unset;
+    max-width: unset;
+    margin-bottom: 0;
+    margin-right: 22px;
+  }
+}
