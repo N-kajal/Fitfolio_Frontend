@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/resetpassword.css";
+import API_BASE_URL from "../../config/apiconfig";
 
 function ResetPassword({ userType }) {
 
@@ -22,12 +23,12 @@ function ResetPassword({ userType }) {
       if (userType === "jobseeker") {
 
         apiUrl =
-          `fitfoliobackend-production.up.railway.app/Job_seeker/reset-password/${token}`;
+          `${API_BASE_URL}/Job_seeker/reset-password/${token}`;
 
       } else {
 
         apiUrl =
-          `fitfoliobackend-production.up.railway.app/Recruiter/reset-password/${token}`;
+          `${API_BASE_URL}/Recruiter/reset-password/${token}`;
       }
 
       const res = await axios.post(

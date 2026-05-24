@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../api/axio";
 import "../../styles/jobApplications.css";
+import API_BASE_URL from "../../config/apiconfig";
 
 function JobApplications() {
   const { jobId } = useParams();
@@ -86,7 +87,7 @@ function JobApplications() {
                       </span>
                     ) : (
                       <a
-                        href={`fitfoliobackend-production.up.railway.app/Recruiter/application/${app.id}/cv`}
+                        href={`${API_BASE_URL}/Recruiter/application/${app.id}/cv`}
                         target="_blank"
                         rel="noreferrer"
                         className="action-btn view-cv-btn"

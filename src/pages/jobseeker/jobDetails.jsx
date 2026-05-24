@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../api/axio";
 import "../../styles/jobDetails.css";
+import API_BASE_URL from "../../config/apiconfig";
 
 
 
@@ -57,7 +58,7 @@ const [loading, setLoading] = useState(false);
     formData.append("cv", cvFile);
 
     const response = await fetch(
-  "fitfoliobackend-production.up.railway.app/Job_seeker/apply-with-cv",
+  `${API_BASE_URL}/Job_seeker/apply-with-cv`,
   {
     method: "POST",
     body: formData

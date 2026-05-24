@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import "../../styles/forgotpassword.css";
+import API_BASE_URL from "../../config/apiconfig";
 
 
 
@@ -39,12 +40,12 @@ function ForgotPassword() {
     if (role === "JOB_SEEKER") {
 
       url =
-        `fitfoliobackend-production.up.railway.app/Job_seeker/forgot-password?email=${email}`;
+        `${API_BASE_URL}/Job_seeker/forgot-password?email=${encodeURIComponent(email)}`;
 
     } else {
 
       url =
-        `fitfoliobackend-production.up.railway.app/recruiter/forgot-password?email=${email}`;
+        `${API_BASE_URL}/recruiter/forgot-password?email=${encodeURIComponent(email)}`;
     }
 
     try {

@@ -1,7 +1,8 @@
 import axios from "axios";
+import API_BASE_URL from "../config/apiconfig";
 
 const api = axios.create({
-  baseURL: "fitfoliobackend-production.up.railway.app", // your backend base URL
+  baseURL: API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },

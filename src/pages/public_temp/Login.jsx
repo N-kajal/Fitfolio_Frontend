@@ -4,7 +4,6 @@ import "../../styles/login.css";
 import Navbar from "../../components/Navbar"; 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +28,7 @@ function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("fitfoliobackend-production.up.railway.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
