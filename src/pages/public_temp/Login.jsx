@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../../styles/login.css";
 import Navbar from "../../components/Navbar"; 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import api from "../../api/axio";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -28,21 +29,13 @@ function Login() {
     }
 
     try {
-      const response = await fetch("fitfoliobackend-production.up.railway.app/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username,
-          password,
-          role,
-        }),
+      const response = await api.post("/auth/login", {
+        username,
+        password,
+        role,
       });
 
-      if (!response.ok) {
-        throw new Error("Invalid credentials");
-      }
-
-      const data = await response.json();
+      const data = response.data;
 
       // ✅ Save login info
       localStorage.setItem("userId", data.userId);
